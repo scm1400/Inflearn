@@ -1,0 +1,49 @@
+.container {
+	width: 100px;
+	height: 300px;
+}
+
+.box {
+	width: 100px;
+	height: 100px;
+	background-color: lightpink;
+	border: 5px solid black;
+	padding: 10px;
+}
+
+li {
+	display: inline-block;
+	background-color: blue;
+	color: white;
+	width: 100px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+@media (max-width: 500px) {
+	li {
+		display: block;
+	}
+}
+
+/* 
+500이하 
+@media (max-width: 500px) {
+}
+
+500이상 1000이하 
+@media (min-width: 500px) and (max-width: 1000px) {
+	body {
+		background-color: red;
+	}
+}
+
+800이상 
+@media (min-width: 800px) {
+	body {
+		background-color: red;
+	}
+}
+*/

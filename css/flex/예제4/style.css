@@ -1,0 +1,91 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Montserrat", sans-serif;
+}
+
+.container {
+	background-color: darkslateblue;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.box {
+	flex-basis: 300px;
+	background-color: white;
+	box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.5);
+	padding: 2em;
+	border-radius: 15px;
+	width: 300px;
+	height: 500px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.title {
+	font-size: 2em;
+	text-align: center;
+}
+
+.widget {
+	display: flex;
+	flex-direction: column;
+	row-gap: 0.5em;
+	margin-bottom: 1em;
+}
+
+button {
+	width: 100%;
+	height: 35px;
+	border-radius: 15px;
+	border: none;
+	background-color: #3498db;
+	color: white;
+	margin-top: 1em;
+}
+
+input {
+	border: none;
+	outline: none;
+	border-bottom: 1px solid #e5e5e5;
+	padding: 0.5em;
+}
+
+i {
+	font-size: 2.5em;
+}
+
+.socials {
+	display: flex;
+	justify-content: center;
+	column-gap: 1em;
+}
+
+.facebook {
+	color: #2980b9;
+}
+
+.google {
+	color: #e74c2c;
+}
+
+.github {
+	color: 34495e;
+}
+
+.link a {
+	color: #34495e;
+	font-size: 85%;
+}
+
+.link {
+	display: flex;
+	justify-content: space-between;
+}

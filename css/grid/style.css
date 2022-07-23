@@ -1,0 +1,110 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container {
+	display: grid;
+	/* height: 100vh; */
+	/* 픽셀로 나누는 방법과 비율로 나누는 방법 */
+	/* grid-template-columns: 50px 150px 300px;
+	grid-template-columns: 1fr 3fr 6fr;
+
+	grid-template-rows: 100px 300px;
+	grid-template-rows: 1fr 3fr;
+
+
+
+	/* 칸의 여백을 설정하는 방법 */
+	/* row-gap: 30px;
+	column-gap: 10px;
+	gap: 30px 10px; */
+
+	/* 첫번째 행만 100px로 설정했기 때문에 나머지는 기본 높이가 됨 */
+	/* 기본 높이의 행 -> 설정을 벗어난 행을 설정하는 옵션 */
+	/*row를 1개만 지정했는데 row가 3개가 된경우 나머지를 200px로 설정한다*/
+	/* grid-template-columns: 100px 300px;
+	grid-template-rows: 100px; */
+	/* grid-auto-columns: ; */
+	/* grid-auto-rows: 200px; */
+
+	/*수평방향 으로 정렬*/
+	/* justify-content: center; */
+
+	/*수직으로 정렬*/
+	/*컨테이너의 높이 값이 설정되어있어야한다*/
+	/* align-content: center; */
+
+	/*align-content + justify-content*/
+	/* place-content: center center; */
+
+	/*수평방향 */
+	/* 아이템 하나하나를 정렬하기 떄문에 space-around, space-between 사용 불가능*/
+	/* justify-items: center; */
+
+	/* 수직방향 */
+	/* 아이템 하나하나를 정렬 */
+	/* align-items: center;
+
+	place-items: center; */
+
+	/* grid-template-areas:
+		"header header header"
+		"aside main main"
+		"footer footer footer"; */
+
+	/*어떻게 배치할지 정해지지 않은 아이템들에 대해 설정을 하는것*/
+	/*기본값*/
+	/* grid-auto-flow: row; 
+	grid-auto-flow: column;
+	grid-template-columns: 100px 200px 300px;
+	grid-auto-columns: 200px; */
+
+	/* grid-template-columns: 100px 200px 300px; */
+	/* grid-template-rows: 100px 100px; */
+
+	/* auto-fill 남는 공간만큼 칸을 자동으로 생성함 */
+	/* grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); */
+
+	/* auto-fit 남는 공간만큼 크기를 늘림 */
+	/* 최대값은 넘지 못한다 */
+	grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
+
+	grid-template-rows: repeat(2, 100px);
+}
+
+.item2 {
+	/* grid-column-start: 2;
+	grid-column-end: 4;
+
+	grid-row-start: 1;
+	grid-row-end: 3;
+
+	grid-column: 2 / span 2;
+	grid-row: 1 / 3; */
+
+	/* self 속성 */
+	/* justify-self: center;
+	align-self: center;
+	place-self: center center; */
+
+	/* order 값이 작은 순서대로 정렬됨, 음수 사용가능 */
+	order: 2;
+}
+
+header {
+	grid-area: header;
+}
+
+aside {
+	grid-area: aside;
+}
+
+main {
+	grid-area: main;
+}
+
+footer {
+	grid-area: footer;
+}

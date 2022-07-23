@@ -1,0 +1,59 @@
+.container {
+	display: flex;
+	flex-direction: row;
+	height: 100vh;
+	/* flex-flow: row wrap;  direction과 wrap을 한번에 지정*/
+	flex-wrap: wrap; /* nowrap일 경우 줄바꿈을 하지않음.  */
+	justify-content: center; /* flex-direction에 따라 기준이 달라짐 */
+	justify-content: space-around; /* 각 요소의 왼쪽, 오른쪽 여백이 같아짐 */
+	justify-content: space-evenly; /* 각 요소의 여백이 같아짐 */
+	justify-content: space-between; /*첫번째 요소는 맨 앞, 마지막 요소는 맨뒤, 나머지 사이 간격 균일*/
+
+	/*flex-direction과 교차되는 축의 정렬*/
+	align-items: stretch; /*기본값*/
+	align-items: flex-start;
+
+	/* 교차축 방향의 정렬 flex-wrap: wrap, 아이템이 여러줄 일 경우에만 사용 가능*/
+	align-content: center;
+}
+
+/*
+flex-wrap 속성 defaul1t 값은 nowrap
+nowrap일 경우 줄바꿈을 하지않음. 
+메인축 방향에 따라 width 또는 height 속성이 무시된다.
+*/
+
+.item {
+	/*item 속성*/
+	/*최소크기를 지정, 글씨가 길어지면 늘어남*/
+	flex-basis: 100px; /*메인축이 세로일 때는 가로의 크기를 지정*/
+
+	/*남는 공간을 비율대로 나눠 가진다?*/
+	flex-grow: 1; /*flex-basis로 지정된 기본 값에서 얼마나 늘어날 수 있는지 지정, 늘어날 비율의 값을 입력*/
+
+	flex-shrink: 1; /*기본 값 1, 화면이 작아지면 작아짐*/
+	flex-shrink: 0; /*크기가 변하지 않음*/
+
+	/*단축 속성*/
+	flex: 1 0 100px; /*grow, shrink, basis*/
+
+	/*align-items가 컨테이너 안의 아이템을 교차축으로 정렬한다면 align-self는 아이템 자기 자신만 바꿈. align-item을 무시함*/
+	align-self: flex-end;
+}
+
+.box1 {
+	background-color: red;
+
+	/*아이템의 시각적인 순서, 실제로 html의 문서를 조작하는 것이 아닌 보이는 순서만 바꿈 데이터의 순서는 안바뀜*/
+	/*screen reader 등을 사용할 때는 order가 적용되지 않음*/
+	/*숫자가 더 작을수록 더 높은 우선순위, 음수 입력 가능*/
+	order: 2;
+}
+
+.box2 {
+	background-color: blue;
+}
+
+.box3 {
+	background-color: blueviolet;
+}
